@@ -6,8 +6,12 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>Edit <code>src/App.js</code> and save to reload.</p>
-        <p>Currently a WIP - please see my <a href='https://github.com/benwilliams140'>GitHub</a> profile.</p>
+        <p>
+          Currently a WIP - please see my
+          <a className='underline' href='https://github.com/benwilliams140'>
+            GitHub
+          </a> profile.
+        </p>
       </header>
     </div>
   );
