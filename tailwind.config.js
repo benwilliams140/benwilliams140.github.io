@@ -4,7 +4,7 @@ module.exports = {
     purgeLayersByDefault: true,
   },
   content: ['./src/**/*.{js,ts,jsx,tsx}', './public/index.html'],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'media',
   theme: {
     extend: {
       colors: {
