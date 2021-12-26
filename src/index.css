@@ -384,8 +384,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bottom-1 {
   bottom: 0.25rem;
 }
-.bottom-5 {
-  bottom: 1.25rem;
+.bottom-8 {
+  bottom: 2rem;
 }
 .bottom-0 {
   bottom: 0px;
@@ -396,21 +396,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-screen {
   height: 100vh;
 }
-.h-40 {
-  height: 10rem;
-}
-.w-7\/12 {
-  width: 58.333333%;
+.h-20 {
+  height: 5rem;
 }
 .w-full {
   width: 100%;
-}
-.w-1\/2 {
-  width: 50%;
-}
-.rounded-r-full {
-  border-top-right-radius: 9999px;
-  border-bottom-right-radius: 9999px;
 }
 .rounded-t-lg {
   border-top-left-radius: 0.5rem;
@@ -430,19 +420,23 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-center {
   text-align: center;
 }
-.text-8xl {
-  font-size: 6rem;
-  line-height: 1;
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 .font-bold {
   font-weight: 700;
 }
-.leading-normal {
-  line-height: 1.5;
+.leading-loose {
+  line-height: 2;
 }
 .tracking-widest {
   letter-spacing: 0.1em;
@@ -465,4 +459,46 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@media (min-width: 640px) {
+
+  .sm\:bottom-5 {
+    bottom: 1.25rem;
+  }
+
+  .sm\:left-1\/4 {
+    left: 25%;
+  }
+
+  .sm\:h-40 {
+    height: 10rem;
+  }
+
+  .sm\:w-7\/12 {
+    width: 58.333333%;
+  }
+
+  .sm\:w-1\/2 {
+    width: 50%;
+  }
+
+  .sm\:rounded-r-full {
+    border-top-right-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+  }
+
+  .sm\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
+
+  .sm\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .sm\:leading-normal {
+    line-height: 1.5;
+  }
 }
