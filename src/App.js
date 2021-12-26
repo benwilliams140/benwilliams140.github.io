@@ -1,13 +1,14 @@
 import logo from './logo.svg';
-import './App.css';
 
 import { Canvas, useCanvas } from 'react-three-fiber';
 import Box from './components/Box';
+import Home from './pages/Home';
 
 function App() {
   return (
-    <div class="App">
-      <header class="App-header">
+    <Home/>
+    /*<div className="App">
+      <header className="App-header">
         <div>
           <Canvas>
             <ambientLight />
@@ -16,10 +17,10 @@ function App() {
           </Canvas>
         </div>
         <p>
-          Currently a WIP - please see my <a class='underline' href='https://github.com/benwilliams140'>GitHub</a> profile.
+          Currently a WIP - please see my <a className='underline' href='https://github.com/benwilliams140'>GitHub</a> profile.
         </p>
       </header>
-    </div>
+    </div>*/
   );
 }
 
