@@ -366,15 +366,93 @@ Ensure the default browser behavior of the `hidden` attribute.
 [hidden] {
   display: none;
 }
+.fixed {
+  position: fixed;
+}
+.absolute {
+  position: absolute;
+}
+.left-0 {
+  left: 0px;
+}
+.top-1\/4 {
+  top: 25%;
+}
+.left-1\/4 {
+  left: 25%;
+}
+.bottom-1 {
+  bottom: 0.25rem;
+}
+.bottom-5 {
+  bottom: 1.25rem;
+}
+.bottom-0 {
+  bottom: 0px;
+}
+.box-content {
+  box-sizing: content-box;
+}
 .h-screen {
   height: 100vh;
 }
-.bg-slate-600 {
+.h-40 {
+  height: 10rem;
+}
+.w-7\/12 {
+  width: 58.333333%;
+}
+.w-full {
+  width: 100%;
+}
+.w-1\/2 {
+  width: 50%;
+}
+.rounded-r-full {
+  border-top-right-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+}
+.rounded-t-lg {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.bg-slate-400 {
   --tw-bg-opacity: 1;
-  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
+  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
+}
+.bg-slate-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
 }
 .bg-cover {
   background-size: cover;
+}
+.text-center {
+  text-align: center;
+}
+.text-8xl {
+  font-size: 6rem;
+  line-height: 1;
+}
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.font-bold {
+  font-weight: 700;
+}
+.leading-normal {
+  line-height: 1.5;
+}
+.tracking-widest {
+  letter-spacing: 0.1em;
+}
+.tracking-wider {
+  letter-spacing: 0.05em;
+}
+.text-slate-300 {
+  --tw-text-opacity: 1;
+  color: rgb(203 213 225 / var(--tw-text-opacity));
 }
 .underline {
   text-decoration-line: underline;
