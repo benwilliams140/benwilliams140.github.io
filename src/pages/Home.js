@@ -10,9 +10,11 @@ function Home(props) {
                 <h1 className='text-slate-300 text-4xl sm:text-8xl font-bold tracking-widest'>
                     Benjamin Williams
                 </h1>
-                <p className='text-slate-300 text-sm sm:text-2xl font-bold tracking-widest pl-24 sm:pl-60 py-0'>Welcome to my personal sandbox.</p>
+                <p className='text-slate-300 text-sm sm:text-2xl font-bold tracking-widest pl-24 sm:pl-60 py-0'>
+                    Welcome to my virtual sandbox.
+                </p>
             </div>
-            <div className='pt-2 sm:pt-4 fixed left-0 w-1/2 block'>
+            <div className='pt-2 sm:pt-4 fixed left-0 w-3/4 sm:w-1/2 block'>
                 <ExpandingMenuItem defaultText='Who am I?' expandedText='I am a fourth year student at Carleton University studying Computer Science with a specialization in game and graphics development.'/>
                 <ExpandingMenuItem defaultText='What is this?' expandedText="Honestly, I'm not too sure what I want this to be yet. This will be updated whenever I have time (hopefully fairly consistenly), and will act like an ever-evolving portfolio."/>
             </div>

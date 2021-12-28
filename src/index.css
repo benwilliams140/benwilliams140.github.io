@@ -397,11 +397,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-full {
   width: 100%;
 }
-.w-1\/2 {
-  width: 50%;
+.w-3\/4 {
+  width: 75%;
 }
-.max-w-\[50\%\] {
-  max-width: 50%;
+.max-w-full {
+  max-width: 100%;
 }
 .origin-top-left {
   transform-origin: top left;
@@ -465,6 +465,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
 .font-bold {
   font-weight: 700;
 }
@@ -473,6 +477,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .tracking-wider {
   letter-spacing: 0.05em;
+}
+.tracking-normal {
+  letter-spacing: 0em;
 }
 .text-slate-300 {
   --tw-text-opacity: 1;
@@ -538,6 +545,10 @@ body {
     min-width: max-content;
   }
 
+  .sm\:max-w-\[50\%\] {
+    max-width: 50%;
+  }
+
   .sm\:rounded-r-full {
     border-top-right-radius: 9999px;
     border-bottom-right-radius: 9999px;
@@ -563,5 +574,10 @@ body {
   .sm\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .sm\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
