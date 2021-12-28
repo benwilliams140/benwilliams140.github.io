@@ -388,22 +388,34 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bottom-0 {
   bottom: 0px;
 }
+.block {
+  display: block;
+}
 .h-screen {
   height: 100vh;
 }
 .w-full {
   width: 100%;
 }
+.w-1\/2 {
+  width: 50%;
+}
+.max-w-\[50\%\] {
+  max-width: 50%;
+}
+.origin-top-left {
+  transform-origin: top left;
+}
 .content-center {
   align-content: center;
-}
-.rounded-r-full {
-  border-top-right-radius: 9999px;
-  border-bottom-right-radius: 9999px;
 }
 .rounded-t-lg {
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
+}
+.rounded-r-full {
+  border-top-right-radius: 9999px;
+  border-bottom-right-radius: 9999px;
 }
 .bg-slate-400 {
   --tw-bg-opacity: 1;
@@ -489,19 +501,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.hover\:translate-x-7:hover {
-  --tw-translate-x: 1.75rem;
+.hover\:scale-125:hover {
+  --tw-scale-x: 1.25;
+  --tw-scale-y: 1.25;
   transform: var(--tw-transform);
 }
 
-.hover\:scale-150:hover {
-  --tw-scale-x: 1.5;
-  --tw-scale-y: 1.5;
-  transform: var(--tw-transform);
-}
-
-.hover\:font-bold:hover {
-  font-weight: 700;
+.hover\:rounded-r-\[25px\]:hover {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
 }
 
 @media (min-width: 640px) {

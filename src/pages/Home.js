@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Canvas, useCanvas } from 'react-three-fiber';
-import Box from '../components/Box';
+import { Canvas } from 'react-three-fiber';
+import Box from '../components/threejs/Box';
+import ExpandingMenuItem from '../components/landing_page/expanding_menu_item';
 
 function Home(props) {
     return(
@@ -11,9 +12,9 @@ function Home(props) {
                 </h1>
                 <p className='text-slate-300 text-sm sm:text-2xl font-bold tracking-widest pl-24 sm:pl-60 py-0'>Welcome to my personal sandbox.</p>
             </div>
-            <div className='pt-2 sm:pt-4 fixed left-0'>
-                <p className='transition text-slate-300 bg-slate-500 bg-cover bg-clip-content text-xl rounded-r-full hover:scale-150 hover:translate-x-7 hover:font-bold duration-300 pt-2'>Who am I?</p>
-                <p className='transition text-slate-300 bg-slate-500 bg-cover bg-clip-content text-xl rounded-r-full hover:scale-150 hover:translate-x-7 hover:font-bold duration-300 pt-2'>What is this?</p>
+            <div className='pt-2 sm:pt-4 fixed left-0 w-1/2 block'>
+                <ExpandingMenuItem defaultText='Who am I?' expandedText='I am a fourth year student at Carleton University studying Computer Science with a specialization in game and graphics development.'/>
+                <ExpandingMenuItem defaultText='What is this?' expandedText="Honestly, I'm not too sure what I want this to be yet. This will be updated whenever I have time (hopefully fairly consistenly), and will act like an ever-evolving portfolio."/>
             </div>
             <div className='content-center'>
                 <div className='w-full fixed bottom-8 sm:bottom-5'>
