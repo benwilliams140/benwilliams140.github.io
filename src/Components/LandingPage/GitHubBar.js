@@ -16,7 +16,7 @@ function GitHubBar(props) {
                         </Canvas>
                     </div>
                     <div className='bg-slate-500 bg-cover rounded-t-lg flex'>
-                        <p className='text-slate-300 text-xl sm:text-2xl text-center tracking-wider'>
+                        <p className='text-slate-300 text-xl sm:text-2xl text-center tracking-wider px-4'>
                             This is currently a WIP. Please see my <a className='underline' href='https://github.com/benwilliams140'>GitHub</a> profile.
                         </p>
                     </div>

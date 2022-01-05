@@ -4,7 +4,8 @@ function NavigationBar(props) {
     const [hovered, setHovered] = useState(false);
 
     return(
-        <div className=''>
+        <div className='bg-slate-500 bg-cover h-screen'>
+            
         </div>
     );
 }

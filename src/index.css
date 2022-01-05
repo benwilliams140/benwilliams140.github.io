@@ -379,17 +379,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 .fixed {
   position: fixed;
 }
+.top-2 {
+  top: 0.5rem;
+}
+.right-2 {
+  right: 0.5rem;
+}
 .bottom-0 {
   bottom: 0px;
 }
 .left-0 {
   left: 0px;
-}
-.col-span-7 {
-  grid-column: span 7 / span 7;
-}
-.col-span-2 {
-  grid-column: span 2 / span 2;
 }
 .mx-auto {
   margin-left: auto;
@@ -401,11 +401,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .flex {
   display: flex;
 }
-.grid {
-  display: grid;
-}
 .h-screen {
   height: 100vh;
+}
+.h-12 {
+  height: 3rem;
 }
 .w-auto {
   width: auto;
@@ -416,14 +416,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-3\/4 {
   width: 75%;
 }
+.w-12 {
+  width: 3rem;
+}
 .max-w-full {
   max-width: 100%;
 }
 .origin-top-left {
   transform-origin: top left;
-}
-.grid-cols-9 {
-  grid-template-columns: repeat(9, minmax(0, 1fr));
 }
 .flex-col {
   flex-direction: column;
@@ -458,6 +458,13 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .bg-clip-content {
   background-clip: content-box;
+}
+.fill-slate-500 {
+  fill: #64748b;
+}
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .py-0 {
   padding-top: 0px;
@@ -549,6 +556,22 @@ body {
 
 @media (min-width: 640px) {
 
+  .sm\:static {
+    position: static;
+  }
+
+  .sm\:col-span-7 {
+    grid-column: span 7 / span 7;
+  }
+
+  .sm\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
+  .sm\:grid {
+    display: grid;
+  }
+
   .sm\:h-40 {
     height: 10rem;
   }
@@ -567,6 +590,10 @@ body {
 
   .sm\:max-w-\[50\%\] {
     max-width: 50%;
+  }
+
+  .sm\:grid-cols-9 {
+    grid-template-columns: repeat(9, minmax(0, 1fr));
   }
 
   .sm\:rounded-r-full {
