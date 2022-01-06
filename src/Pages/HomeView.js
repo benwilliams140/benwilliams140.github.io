@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
-import ExpandingMenuItem from './ExpandingMenuItem';
-import GitHubBar from './GitHubBar';
+import ExpandingMenuItem from '../Components/LandingPage/ExpandingMenuItem';
+import GitHubBar from '../Components/LandingPage/GitHubBar';
 
 function HomeView(props) {
     const [hovered, setHovered] = useState(false);
 
     return(
-        <div className='bg-slate-400 bg-cover w-auto h-screen pt-52'>
+        <div className='w-auto h-screen pt-52'>
             <div className='bg-slate-500 bg-cover sm:rounded-r-full w-full pt-3 sm:pt-6 pb-0 sm:min-w-max sm:w-11/12 h-18 sm:h-40'>
                 <h1 className='text-slate-300 text-4xl sm:text-6xl lg:text-8xl font-bold tracking-widest'>
                     Benjamin Williams
@@ -17,8 +17,8 @@ function HomeView(props) {
                 </p>
             </div>
             <div className='pt-2 sm:pt-4 fixed left-0 w-3/4 sm:w-1/2 block'>
-                <ExpandingMenuItem defaultText='Who am I?' expandedText='I am a fourth year student at Carleton University studying Computer Science with a specialization in game and graphics development.'/>
-                <ExpandingMenuItem defaultText='What is this?' expandedText="Honestly, I'm not too sure what I want this to be yet. This will be updated whenever I have time (hopefully fairly consistenly), and will act like an ever-evolving portfolio."/>
+                <ExpandingMenuItem defaultText='About Me' expandedText='I am a fourth year student at Carleton University studying Computer Science with a specialization in game and graphics development.'/>
+                <ExpandingMenuItem defaultText='About the Website' expandedText="Honestly, I'm not too sure what I want this to be yet. This will be updated whenever I have time (hopefully fairly consistenly), and will act like an ever-evolving portfolio."/>
             </div>
             <GitHubBar/>
         </div>
