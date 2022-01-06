@@ -16,10 +16,6 @@ function HomeView(props) {
                     Welcome to my virtual sandbox.
                 </p>
             </div>
-            <div className='pt-2 sm:pt-4 fixed left-0 w-3/4 sm:w-1/2 block'>
-                <ExpandingMenuItem defaultText='About Me' expandedText='I am a fourth year student at Carleton University studying Computer Science with a specialization in game and graphics development.'/>
-                <ExpandingMenuItem defaultText='About the Website' expandedText="Honestly, I'm not too sure what I want this to be yet. This will be updated whenever I have time (hopefully fairly consistenly), and will act like an ever-evolving portfolio."/>
-            </div>
             <GitHubBar/>
         </div>
     );
