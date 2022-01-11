@@ -12,7 +12,7 @@ function NavigationBar(props) {
                     return(<NavBarItem key={index}
                                         index={index}
                                         tag={item.tag}
-                                        selected={selectedIndex == index}
+                                        selected={selectedIndex === index}
                                         select={(index) => {
                                             selectIndex(index);
                                             props.changeView(index);

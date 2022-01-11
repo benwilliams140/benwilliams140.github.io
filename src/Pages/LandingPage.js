@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 
-import HomeView from './HomeView';
-import TestView from './TestView';
+import Home from './Home';
+import ParticlesTest from './ParticlesTest';
 
 import NavigationBar from '../Components/LandingPage/NavigationBar';
 import MobileNavigationBar from '../Components/LandingPage/MobileNavigationBar';
 
 
 let navBarItems = [
-    { tag: 'Home', component: HomeView },
-    { tag: 'Test', component: TestView }
+    { tag: 'Home', component: Home },
+    { tag: 'Particles Test', component: ParticlesTest }
 ];
 
-function Home(props) {
+function LandingPage(props) {
     const [selectedView, selectView] = useState(0);
 
     return(
@@ -20,6 +20,7 @@ function Home(props) {
             <div className='sm:col-span-7'>
                 {
                     navBarItems.map((item, index) => {
+                        // only render the selected navigation bar component
                         return index === selectedView && <item.component key={index}/>
                     })
                 }
@@ -35,4 +36,4 @@ function Home(props) {
     );
 }
 
-export default Home;
+export default LandingPage;
