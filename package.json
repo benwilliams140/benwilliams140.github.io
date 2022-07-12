@@ -23,12 +23,13 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "prebuild": "npm run build:css",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "watch:css": "postcss src/styles/index.css -o src/index.css",
-    "watch": "chokidar \"./src/**/*.js\" -c \"npm run watch:css\"",
+    "build:css": "postcss src/Styles/index.css -o src/index.css",
+    "watch": "chokidar \"./src/**/*.js\" -c \"npm run build:css\"",
     "dev": "concurrently \"npm run watch\" \"npm run start\""
   },
   "eslintConfig": {
