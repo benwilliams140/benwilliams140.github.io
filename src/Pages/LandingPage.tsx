@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import * as React from 'react';
 
 import Home from './Home';
 import ParticlesTest from './ParticlesTest';
@@ -6,6 +6,7 @@ import ParticlesTest from './ParticlesTest';
 import NavigationBar from '../Components/LandingPage/NavigationBar';
 import MobileNavigationBar from '../Components/LandingPage/MobileNavigationBar';
 
+const { useState } = React;
 
 let navBarItems = [
     { tag: 'Home', component: Home },

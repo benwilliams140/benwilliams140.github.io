@@ -5,9 +5,9 @@ import * as THREE from 'three';
 import '../../../Shaders/Explosion/ExplosionMaterial';
 
 function ExplosionParticles(props) {
-    const [coords] = useMemo(() => {
-        
-    });
+    const coords = useMemo(() => {
+        return undefined;
+    }, []);
 
     return(
         <points>

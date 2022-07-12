@@ -1,3 +1,4 @@
+import * as React from 'react';
 import LandingPage from './Pages/LandingPage';
 
 function isMobile() {
@@ -16,7 +17,7 @@ function isMobile() {
     });
 }
 
-function App() {
+const App = () => {
     return (
         <LandingPage isMobile={isMobile}/>
     );
