@@ -3,7 +3,7 @@ import { Canvas } from 'react-three-fiber';
 
 import Box from '../WebGL/Box';
 
-function GitHubBar(props) {
+function GitHubBar(props: any) {
     return(
         <div className='flex justify-center'>
             <div className='fixed bottom-0'>

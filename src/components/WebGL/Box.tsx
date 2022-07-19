@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import { MeshProps, useFrame } from 'react-three-fiber';
 import * as THREE from 'three';
 
-function Box(props) {
+function Box(props: any) {
     const mesh = useRef<MeshProps>(); // get direct access to mesh
 
     // setup states
@@ -10,10 +10,8 @@ function Box(props) {
     const [ hovered, setHovered ] = useState(false);
 
     useFrame((state, delta) => {
-        if(mesh.current) {
-            mesh.current.rotation.x += 0.01;
-            mesh.current.rotation.y += 0.01;
-        }
+        mesh.current?.rotateX?.(0.01);
+        mesh.current?.rotateY?.(0.01);
     });
 
     return(

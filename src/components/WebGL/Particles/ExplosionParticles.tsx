@@ -2,9 +2,9 @@ import React, { useState, useRef, useMemo } from 'react';
 import { useFrame } from 'react-three-fiber';
 import * as THREE from 'three';
 
-import '../../../Shaders/Explosion/ExplosionMaterial';
+import '../../../shaders/Explosion/ExplosionMaterial';
 
-function ExplosionParticles(props) {
+function ExplosionParticles(props: any) {
     const coords = useMemo(() => {
         return undefined;
     }, []);

@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import * as React from 'react';
+import ExpandingMenuItem from '../components/Home/ExpandingMenuItem';
+import GitHubBar from '../components/Home/GitHubBar';
 
-import ExpandingMenuItem from '../Components/Home/ExpandingMenuItem';
-import GitHubBar from '../Components/Home/GitHubBar';
+const { useState } = React;
 
-function HomeView(props) {
+function HomeView(props: any) {
     const [hovered, setHovered] = useState(false);
 
     return(

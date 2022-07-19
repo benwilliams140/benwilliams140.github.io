@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function NavBarItem(props) {
+function NavBarItem(props: any) {
     return(
         <div className={`flex ${props.selected ? 'bg-slate-400 bg-cover' : ''} border-slate-600 border-b-2 h-16 justify-center`}
                 onClick={(e) => props.select(props.index)}>

@@ -3,8 +3,8 @@ import * as React from 'react';
 import Home from './Home';
 import ParticlesTest from './ParticlesTest';
 
-import NavigationBar from '../Components/LandingPage/NavigationBar';
-import MobileNavigationBar from '../Components/LandingPage/MobileNavigationBar';
+import NavigationBar from '../components/LandingPage/NavigationBar';
+import MobileNavigationBar from '../components/LandingPage/MobileNavigationBar';
 
 const { useState } = React;
 
@@ -13,7 +13,7 @@ let navBarItems = [
     { tag: 'Particles Test', component: ParticlesTest }
 ];
 
-function LandingPage(props) {
+function LandingPage(props: any) {
     const [selectedView, selectView] = useState(0);
 
     return(

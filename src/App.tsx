@@ -1,5 +1,5 @@
 import * as React from 'react';
-import LandingPage from './Pages/LandingPage';
+import LandingPage from './pages/LandingPage';
 
 function isMobile() {
     const toMatch = [

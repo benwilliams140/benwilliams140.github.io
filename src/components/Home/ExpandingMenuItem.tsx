@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function ExpandingMenuItem(props) {
+function ExpandingMenuItem(props: any) {
     const [hovered, setHovered] = useState(false);
 
     return(

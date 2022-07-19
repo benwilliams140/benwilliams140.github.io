@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import NavBarItem from './NavBarItem';
 
-function MobileNavigationBar(props) {
+function MobileNavigationBar(props: any) {
     const [active, setActive] = useState(false);
     const [selectedIndex, selectIndex] = useState(0);
 
@@ -19,12 +19,12 @@ function MobileNavigationBar(props) {
             <div className={`w-screen ${active ? '' : 'hidden'}`}>
                 <div className='bg-slate-500 bg-cover border-slate-600 border-4 pl-0 fixed top-0 right-0 h-screen w-5/6 rounded-l-3xl overflow-y-auto'>
                     {
-                        props.items.map((item, index) => {
+                        props.items.map((item: any, index: number) => {
                             return(<NavBarItem key={index}
                                 index={index}
                                 tag={item.tag}
                                 selected={selectedIndex === index}
-                                select={(index) => {
+                                select={(index: number) => {
                                     selectIndex(index);
                                     props.changeView(index);
                                 }}/>);
