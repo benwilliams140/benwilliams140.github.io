@@ -8,33 +8,32 @@ import MobileNavigationBar from '../components/LandingPage/MobileNavigationBar';
 
 const { useState } = React;
 
-let navBarItems = [
-    { tag: 'Home', component: Home },
-    { tag: 'Particles Test', component: ParticlesTest }
+const navBarItems = [
+  { tag: 'Home', component: Home },
+  { tag: 'Particles Test', component: ParticlesTest },
 ];
 
 function LandingPage(props: any) {
-    const [selectedView, selectView] = useState(0);
+  const [selectedView, selectView] = useState(0);
 
-    return(
-        <div className='bg-slate-400 bg-cover w-auto h-screen sm:grid sm:grid-cols-9'>
-            <div className='sm:col-span-7'>
-                {
-                    navBarItems.map((item, index) => {
-                        // only render the selected navigation bar component
-                        return index === selectedView && <item.component key={index}/>
-                    })
+  return (
+    <div className="bg-slate-400 bg-cover w-auto h-screen sm:grid sm:grid-cols-9">
+      <div className="sm:col-span-7">
+        {
+                    navBarItems.map((item, index) =>
+                    // only render the selected navigation bar component
+                      index === selectedView && <item.component key={index} />)
                 }
-            </div>
-            <div className='fixed top-0 right-0 sm:static sm:col-span-2'>
-                {
-                    props.isMobile() ?
-                    <MobileNavigationBar items={navBarItems} changeView={selectView}/> :
-                    <NavigationBar items={navBarItems} changeView={selectView}/>
+      </div>
+      <div className="fixed top-0 right-0 sm:static sm:col-span-2">
+        {
+                    props.isMobile()
+                      ? <MobileNavigationBar items={navBarItems} changeView={selectView} />
+                      : <NavigationBar items={navBarItems} changeView={selectView} />
                 }
-            </div>
-        </div>
-    );
+      </div>
+    </div>
+  );
 }
 
 export default LandingPage;

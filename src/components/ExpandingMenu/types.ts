@@ -1,20 +1,10 @@
-import type { BaseProps } from '../../constants/types';
-
 export type MenuItem = {
-
-};
-
-export type ExpandingMenuProps = BaseProps & {
     /**
-     * The items to render in the menu.
+     * The main label that is shown when the item is *not* hovered
      */
-    items: MenuItem[];
+    label: string;
     /**
-     * Width of the menu items
+     * The text that is shown when the item is hovered
      */
-    width?: number;
+    text: string;
 };
-
-export type ExpandingMenuItemProps = BaseProps & Pick<ExpandingMenuProps, 'width'> & {
-
-}
