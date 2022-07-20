@@ -12,11 +12,18 @@ function ExpandingMenuItem(props: ExpandingMenuItemProps) {
 
   const [isHovered, setIsHovered] = useState<boolean>(false);
 
-  const handleMouseMove = useCallback((hovered: boolean) => () => {
-    setIsHovered(hovered);
-  }, []);
+  const handleMouseMove = useCallback(
+    (hovered: boolean) => () => {
+      setIsHovered(hovered);
+    },
+    [],
+  );
 
-  return <p onMouseEnter={handleMouseMove(true)} onMouseLeave={handleMouseMove(false)}>{isHovered ? text : label }</p>;
+  return (
+    <p onMouseEnter={handleMouseMove(true)} onMouseLeave={handleMouseMove(false)}>
+      {isHovered ? text : label}
+    </p>
+  );
 }
 
 export default ExpandingMenuItem;
