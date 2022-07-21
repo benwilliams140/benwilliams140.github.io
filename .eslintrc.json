@@ -5,8 +5,7 @@
         "jest": true
     },
     "extends": [
-        "plugin:react/recommended",
-        "plugin:prettier/recommended",
+        "prettier",
         "airbnb"
     ],
     "parser": "@typescript-eslint/parser",
@@ -18,10 +17,15 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react",
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "prettier"
     ],
     "rules": {
-        "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }]
+        "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+        "prettier/prettier": "error",
+        "react/function-component-definition": [1, { "namedComponents": "arrow-function" }],
+        "react/require-default-props": [0],
+        "no-use-before-define": ["error", {"variables": false}],
+        "arrow-parens": [2, "as-needed"]
     }
 }
