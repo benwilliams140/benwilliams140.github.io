@@ -1,10 +1,10 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import type { BaseProps } from '../../constants/types';
+import type { BaseComponentProps } from '../../constants/types';
 import ExpandingMenuItem from './ExpandingMenuItem';
 import type { MenuItem } from './types';
 
-export type ExpandingMenuProps = BaseProps & {
+export type ExpandingMenuProps = BaseComponentProps & {
   /**
    * The items to render in the menu.
    */
@@ -17,9 +17,10 @@ export type ExpandingMenuProps = BaseProps & {
 
 const ExpandingMenu = (props: ExpandingMenuProps) => {
   const { items, width = 300 } = props;
+
   return (
     <StyledContainer width={width}>
-      {items.map(item => {
+      {items.map((item: MenuItem) => {
         const { label, text } = item;
         return <ExpandingMenuItem label={label} text={text} />;
       })}
@@ -28,11 +29,10 @@ const ExpandingMenu = (props: ExpandingMenuProps) => {
 };
 
 const StyledContainer = styled.div<{ width: number }>`
-  width: ${(props) => props.width};
+  width: ${props => props.width}px;
   height: auto;
   display: flex;
   flex-direction: column;
-  background: red;
 `;
 
 export default ExpandingMenu;

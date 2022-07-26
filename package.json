@@ -39,7 +39,8 @@
     "build:css": "postcss src/Styles/index.css -o src/index.css",
     "watch": "chokidar \"./src/**/*.js\" -c \"npm run build:css\"",
     "dev": "concurrently \"npm run watch\" \"npm run start\"",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "prettier": "prettier --check \"src/**/*.*\""
   },
   "eslintConfig": {
     "extends": [

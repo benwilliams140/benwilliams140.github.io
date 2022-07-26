@@ -4,16 +4,10 @@ import * as THREE from 'three';
 
 import '../../../shaders/Explosion/ExplosionMaterial';
 
-function ExplosionParticles(props: any) {
-    const coords = useMemo(() => {
-        return undefined;
-    }, []);
+const ExplosionParticles = (props: any) => {
+  const coords = useMemo(() => undefined, []);
 
-    return(
-        <points>
-
-        </points>
-    );
-}
+  return <points />;
+};
 
 export default ExplosionParticles;
