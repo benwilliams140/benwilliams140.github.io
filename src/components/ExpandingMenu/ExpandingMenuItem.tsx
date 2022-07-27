@@ -36,6 +36,7 @@ const StyledSpan = styled.span`
   margin-bottom: 8px;
   border-radius: 0 999px 999px 0;
   background-color: ${props => props.theme.foreground};
+  color: ${props => props.theme.text};
 `;
 
 export default ExpandingMenuItem;
