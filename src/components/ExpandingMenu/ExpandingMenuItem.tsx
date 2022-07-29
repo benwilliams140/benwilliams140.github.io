@@ -24,19 +24,21 @@ const ExpandingMenuItem = (props: ExpandingMenuItemProps) => {
     <StyledSpan
       onMouseEnter={handleMouseMove(true)}
       onMouseLeave={handleMouseMove(false)}
+      isHovered={isHovered}
       theme={colors}>
       {isHovered ? text : label}
     </StyledSpan>
   );
 };
 
-const StyledSpan = styled.span`
+const StyledSpan = styled.span<{ isHovered: boolean }>`
   width: 100%;
   padding: 4px 0;
   margin-bottom: 8px;
   border-radius: 0 999px 999px 0;
   background-color: ${props => props.theme.foreground};
   color: ${props => props.theme.text};
+  font-weight: ${props => (props.isHovered ? 'normal' : 'bolder')};
 `;
 
 export default ExpandingMenuItem;

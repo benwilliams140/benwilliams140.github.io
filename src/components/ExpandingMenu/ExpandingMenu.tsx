@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import type { BaseComponentProps } from '../../constants/types';
+import Divider from '../Divider/Divider';
 import ExpandingMenuItem from './ExpandingMenuItem';
 import type { MenuItem } from './types';
 
@@ -24,6 +25,7 @@ const ExpandingMenu = (props: ExpandingMenuProps) => {
         const { label, text } = item;
         return <ExpandingMenuItem label={label} text={text} />;
       })}
+      <Divider direction="horizontal" />
     </StyledContainer>
   );
 };
