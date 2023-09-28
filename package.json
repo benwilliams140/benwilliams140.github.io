@@ -1,56 +1,44 @@
 {
   "name": "benwilliams140.github.io",
-  "version": "0.1.0",
   "private": true,
-  "homepage": "http://benwilliams140.github.io/",
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.16.1",
-    "@testing-library/react": "^12.1.2",
-    "@testing-library/user-event": "^13.5.0",
-    "autoprefixer": "^10.4.0",
-    "chokidar-cli": "^3.0.0",
-    "concurrently": "^6.5.1",
-    "postcss": "^8.4.5",
-    "postcss-cli": "^9.1.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "^5.0.0",
-    "react-three-fiber": "^6.0.13",
-    "tailwindcss": "^3.0.7",
-    "three": "^0.136.0",
-    "web-vitals": "^2.1.2"
-  },
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "prebuild": "npm run build:css",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "build:css": "postcss src/Styles/index.css -o src/index.css",
-    "watch": "chokidar \"./src/**/*.js\" -c \"npm run build:css\"",
-    "dev": "concurrently \"npm run watch\" \"npm run start\""
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "predeploy": "pnpm run build",
+    "deploy": "gh-pages -d dist"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "@ant-design/icons": "^5.2.6",
+    "@emailjs/browser": "^3.11.0",
+    "clsx": "^2.0.0",
+    "emailjs-com": "^3.2.0",
+    "lodash-es": "^4.17.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "unocss": "^0.55.6"
   },
   "devDependencies": {
-    "gh-pages": "^3.2.3"
+    "@types/lodash-es": "^4.17.9",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@unocss/preset-attributify": "^0.55.6",
+    "@unocss/preset-uno": "^0.55.6",
+    "@unocss/transformer-attributify-jsx": "^0.55.6",
+    "@vitejs/plugin-react": "^4.0.3",
+    "eslint": "^8.45.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "gh-pages": "^6.0.0",
+    "prettier": "^3.0.2",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
   }
 }
