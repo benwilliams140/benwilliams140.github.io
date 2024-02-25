@@ -1,11 +1,7 @@
-import { defineConfig } from 'unocss';
-// import presetUno from '@unocss/preset-uno';
-// import presetAttributify from '@unocss/preset-attributify';
-// import transformerAttributifyJsx from '@unocss/transformer-attributify-jsx';
+import { defineConfig, presetUno, presetIcons } from 'unocss';
 
 export default defineConfig({
-  // presets: [presetAttributify(), presetUno()],
-  // transformers: [transformerAttributifyJsx()],
+  presets: [presetUno(), presetIcons()],
   preflights: [
     {
       getCSS() {
