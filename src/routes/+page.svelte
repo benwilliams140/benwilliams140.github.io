@@ -20,8 +20,10 @@
     class="flex-items-center animate-fade-in-up animate-delay-500 animate-backwards absolute bottom-4 flex w-full flex-col">
     <span class="text-secondary text-5 md:text-7"
       >Welcome to my personal sandbox.</span>
-    <div class="i-ant-design-down-outlined color-secondary animate-bounce pt-4 outline-none" />
+    <div
+      class="i-ant-design-down-outlined color-secondary animate-bounce pt-4 outline-none" />
   </div>
+
 </section>
 
 <style></style>

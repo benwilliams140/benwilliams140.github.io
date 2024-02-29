@@ -1,11 +1,11 @@
 <script lang="ts">
-  import { setContext } from 'svelte';
+  import MenuButton from './MenuButton.svelte';
 
   let isOpen = $state(false);
 
-  function handleOnClick() {
+  function toggleSidebar() {
     isOpen = !isOpen;
   }
 </script>
 
-<div></div>
+<div><MenuButton {isOpen} {toggleSidebar} /><slot /></div>

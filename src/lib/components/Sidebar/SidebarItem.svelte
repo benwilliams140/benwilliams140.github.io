@@ -6,8 +6,9 @@
 </script>
 
 <script lang="ts">
-  export let id;
-  export let label;
+  let { id, label }: ItemType = $props<ItemType>();
+
+  console.log(id, label);
 </script>
 
 <div></div>
