@@ -11,6 +11,6 @@
   console.log(id, label);
 </script>
 
-<div></div>
+<div>{id}</div>
 
 <style></style>
