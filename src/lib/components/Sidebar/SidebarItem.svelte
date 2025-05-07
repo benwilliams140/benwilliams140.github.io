@@ -1,38 +1,41 @@
-<script lang="ts" context="module">
-  export type ItemType = {
-    id: string;
-    label: string;
-  };
-</script>
-
 <script lang="ts">
-  import { cva } from 'class-variance-authority';
-  import { getContext } from 'svelte';
+  import { getContext, onMount, type Snippet } from 'svelte';
+  import { page } from '$app/state';
+  import type { SidebarState } from './Sidebar.svelte';
+  import { cx } from 'class-variance-authority';
 
-  let { id, label }: ItemType = $props<ItemType>();
+  let { href, children } = $props<{ href: string; children: Snippet }>();
+  let sidebar = getContext<SidebarState>('sidebar');
 
-  let sidebar = getContext('sidebar');
+  let anchorRef: HTMLAnchorElement;
 
-  const itemStyles = cva(
-    [
-      'relative',
-      'w-full',
-      'h-12',
-      'border-b-solid',
-      'border-b-1px',
-      'border-border',
-      'hover:active:overlay',
-      'text-secondary',
-      'text-xl',
-      'text-center',
-      'content-center',
-      'line-height-48px',
-    ],
-    { variants: { selected: { true: ['bg-secondary-30'] } } }
-  );
+  let index = $state<number>(-1);
+  let selected = $derived(page.url.pathname === href);
+  let focused = $derived(sidebar.focusedIndex === index);
+
+  function handleMouseEnter(_: MouseEvent) {
+    sidebar.focusedIndex = index;
+  }
+
+  onMount(() => {
+    index = sidebar.nextIndex;
+  });
 </script>
 
-<button class={itemStyles({ selected: id === sidebar.selectedItem })} {id}
-  >{label}</button>
+<li role="presentation" onmouseenter={handleMouseEnter}>
+  <a
+    bind:this={anchorRef}
+    {href}
+    id={href}
+    role="menuitem"
+    tabindex={-1}
+    class={cx(
+      'border-border text-secondary hover:bg-hover active:bg-active block w-72 border-b-2 p-3 text-center text-xl',
+      selected && !focused && 'bg-secondary/50',
+      focused && 'bg-secondary/30'
+    )}>
+    {@render children()}
+  </a>
+</li>
 
 <style></style>
