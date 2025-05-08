@@ -5,13 +5,13 @@
 </script>
 
 <main class="overflow-hidden bg-panel h-dvh w-dvw">
-  <slot />
   <Sidebar>
     <SidebarItem href="/">Home</SidebarItem>
     <SidebarItem href="/about">About</SidebarItem>
     <SidebarItem href="/projects">Projects</SidebarItem>
     <SidebarItem href="/contact">Contact Me</SidebarItem>
   </Sidebar>
+  <slot />
 </main>
 
 <style lang="postcss">
