@@ -30,7 +30,7 @@
     role="menuitem"
     tabindex={-1}
     class={cx(
-      'border-border text-secondary hover:bg-hover active:bg-active block w-72 border-b-2 p-3 text-center text-xl',
+      'border-border text-tertiary hover:bg-hover active:bg-active block w-72 border-b-2 p-3 text-center text-xl',
       selected && !focused && 'bg-secondary/50',
       focused && 'bg-secondary/30'
     )}>

@@ -142,15 +142,15 @@
   }
 
   button[aria-expanded='true'] ~ ul {
-    animation: slide-in-right 125ms linear 1;
+    animation: slide-in-from-right 125ms linear 1;
   }
 
   button[aria-expanded='false'] ~ ul {
-    animation: slide-out-right 125ms linear 1;
+    animation: slide-out-to-right 125ms linear 1;
     animation-fill-mode: forwards;
   }
 
-  @keyframes slide-in-right {
+  @keyframes slide-in-from-right {
     from {
       transform: translate3d(100%, 0, 0);
       visibility: visible;
@@ -160,7 +160,7 @@
     }
   }
 
-  @keyframes slide-out-right {
+  @keyframes slide-out-to-right {
     from {
       transform: translate3d(0, 0, 0);
     }
