@@ -37,6 +37,12 @@
   let nodes = $state<HTMLAnchorElement[]>([]);
   let hasOpened = $state(false);
 
+  $effect(() => {
+    if (page.url.pathname) {
+      open = false;
+    }
+  });
+
   function handleToggle() {
     hasOpened = true;
     open = !open;
@@ -79,7 +85,6 @@
         }
 
         nodes[sidebar.focusedIndex].click();
-        open = false;
         setTimeout(() => {
           buttonRef.focus();
         }, 125);
