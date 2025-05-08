@@ -9,6 +9,7 @@
     <SidebarItem href="/">Home</SidebarItem>
     <SidebarItem href="/about">About</SidebarItem>
     <SidebarItem href="/projects">Projects</SidebarItem>
+    <SidebarItem href="/blog">Blog and Things</SidebarItem>
     <SidebarItem href="/contact">Contact Me</SidebarItem>
   </Sidebar>
   <slot />
